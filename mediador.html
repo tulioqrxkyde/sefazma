@@ -611,7 +611,7 @@ img.emoji {
                     <div class="elementor-widget-wrap">
                 <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-            <h2 class="elementor-heading-title elementor-size-default">Integração Semântica do SemanticSEFAZ-MA</h2>        </div>
+            <h2 class="elementor-heading-title elementor-size-default">Consultando as Fontes de Dados Através da Visão Semântica</h2>        </div>
                 </div>
                         </div>
             </div>
@@ -640,16 +640,14 @@ img.emoji {
                     <div class="elementor-widget-wrap">
                 <div class="elementor-element elementor-element-d7736ec elementor-widget elementor-widget-text-editor" data-id="d7736ec" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix"><p>No SemanticSefazMA, o processo de Integração Semântica (<b>IS</b>) é baseado na abordagem <i>pay-as-you-go</i>. Essa abordagem permite que a IS possa ser realizada de forma incremental, e a medida que mais esforço é investido na integração semântica de novas fontes de dados, o portal poderá atender as necessidades de um maior número de aplicações. O processo de IS de uma fonte S segue os seguintes passos: 
-                    </p>
-<p><b>Especificação da visão local</b> <b>Vs</b> = < <b>Os, Ms</b> >, onde Os é a ontologia da visão e Ms é um conjunto de regras que mapeiam o vocabulário de Os no vocabulário da fonte S. Note que Os descreve a fonte de dados usando o vocabulário da Ontologia de domínio, portanto Os é um subconjunto de  Od. Na construção da ontologia de domínio também adotamos o enfoque pay-as-you-go.</li>
-<b>Especificação das Regras de Linkage</b> as quais serão usadas para gerar Links semânticos, que mapeiam instâncias de S com instâncias de outras fontes de dados que representam o mesmo objeto do mundo real (resolução de entidades). Em OWL, esses links são estabelecidos através da propriedade owl:sameAs. O processo de identificação desses links é conhecido como linkage de dados. 
-<
-<b>Especificação das regras de fusão</b> para as propriedades de S. Estas regras são definidas com base na qualidade da fonte S, e são necessárias na resolução de conflitos gerados por inconsistências nos dados.
-</ol></p>
-
-<p>O portal atualmente SemanticSefazMA publica quatro bases de Dados: <b>IBGE / CNAE , SEFAZ-MA, RFB</b> e <b>REDESIM</b>. Essa fontes estão integradas semanticamente e já podem ser acessada através da visão ontológica do portal. O resultado da Integração semântica das fontes de dado pode ser visualizado na aba Visão Semântica.</p>
-
+                    <div class="elementor-text-editor elementor-clearfix"><p>Os passos envolvidos no processamento de uma consulta são sumarizados a seguir: </p>
+                <ol>
+                        <li>O usuário define a consulta SPARQL Q sobre a ontologia de domínio da visão ontológica.</li>
+                        <li>A consulta Q é traduzida em sub-consultas SQL definidas sobre o esquema das fontes de dados locais. A tradução é feita baseada nos mapeamentos entre as fontes de dados e a ontologia de domínio. Note que é necessário o uso de “mapeamentos completos”, o que significa que os axiomas, restrições de integridade, e as regras de ligação são todos compiladas nos mapeamentos.</li>
+                        <li>As sub-consultas SQL são executadas pelo SGBD local.</li>
+                        <li>O resultado das sub-consultas são integrados usando os links sameAs, e o resultado final é traduzido em RDF, de acordo com a consulta SPARQL.</li>
+                        <li>O resultado é então retornado para o usuário.</li>
+                </ol>
 </div>
                 </div>
                 </div>
@@ -703,7 +701,7 @@ img.emoji {
                     <div class="elementor-widget-wrap">
                 <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-            <h2 class="elementor-heading-title elementor-size-default">Consultando as Fontes de Dados através da Visão Semântica</h2>       </div>
+            <h2 class="elementor-heading-title elementor-size-default">Exemplos de Consulta Usando o Mediador Semântico</h2>       </div>
                 </div>
                         </div>
             </div>
